@@ -113,6 +113,9 @@ const Register = () => {
         setSuccess('Registration successful!');
         setFormData({ name: '', email: '', password: '' });
       }
+      else {
+        setError(response.data.msg);
+      }
     } catch (err) {
       setError('Registration failed. Please try again.');
     }

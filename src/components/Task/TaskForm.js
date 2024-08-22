@@ -88,8 +88,20 @@ const TaskForm = () => {
             name="duedate"
             value={task.duedate}
             onChange={handleChange}
+            min={new Date().toISOString().split('T')[0]} // Set min date to today
             required
           />
+
+
+          {/* <label htmlFor="duedate">Due Date:</label>
+          <input
+            type="date"
+            id="duedate"
+            name="duedate"
+            value={task.duedate}
+            onChange={handleChange}
+            required
+          /> */}
 
           {/* <label htmlFor="priority">Priority (1-10):</label>
           <input

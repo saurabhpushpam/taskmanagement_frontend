@@ -80,6 +80,26 @@ const GetTask = () => {
     }
   };
 
+
+  // Display date in YYYY-MM-DD Format:
+
+  const formatDate = (dateString) => {
+    const date = new Date(dateString);
+    return date.toISOString().split('T')[0];
+  };
+
+
+  // Display date in DD-MM-YYYY Format:
+
+  // const formatDate = (dateString) => {
+  //   const date = new Date(dateString);
+  //   const day = String(date.getDate()).padStart(2, '0');
+  //   const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are zero-based
+  //   const year = date.getFullYear();
+
+  //   return `${day}-${month}-${year}`;
+  // };
+
   return (
     <>
       <Header></Header>
@@ -96,7 +116,8 @@ const GetTask = () => {
             <li key={task._id} className="task-item">
               <h3>{task.taskname}</h3>
               <p><strong>Description:</strong> {task.description}</p>
-              <p><strong>Due Date:</strong> {task.duedate}</p>
+              {/* <p><strong>Due Date:</strong> {task.duedate}</p> */}
+              <p><strong>Due Date:</strong> {formatDate(task.duedate)}</p>
               <p><strong>Priority:</strong> {task.priority}</p>
               <p><strong>Status:</strong> {task.status}</p>
 
