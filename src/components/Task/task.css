@@ -63,6 +63,48 @@
   margin-bottom: 20px;
 }
 
+
+
+/* Center the search container */
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.search-container input {
+  width: 50%; /* Adjust width as needed */
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+/* Add a border color change on focus */
+.search-container input:focus {
+  border-color: #007bff; /* Blue border on focus */
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.2); /* Focused box-shadow */
+}
+
+/* Optional: Add some padding for the page content */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+/* Optional: Style the task list container */
+.task-list-container {
+  padding: 20px;
+}
+
+
+
 @media (max-width: 768px) {
   .task-form {
     max-width: 100%;
